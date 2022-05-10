@@ -18,7 +18,7 @@ locals {
   lambda_layer_codebuild_delay                     = "420s"
   lambda_layer_python_version                      = "3.8"
   lambda_layer_name                                = "aft-common"
-  permissions_boundary_arn                         = "arn:aws:iam::700270903129:policy/CrayonBoundary"
+  permissions_boundary_arn                         = ""
   ssm_paths = {
     aft_tf_aws_customizations_module_url_ssm_path     = "/aft/config/aft-pipeline-code-source/repo-url"
     aft_tf_aws_customizations_module_git_ref_ssm_path = "/aft/config/aft-pipeline-code-source/repo-git-ref"
