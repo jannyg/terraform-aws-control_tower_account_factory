@@ -34,7 +34,6 @@ module "ct_management_exec_role" {
     aws = aws.ct_management
   }
   trusted_entity = aws_iam_role.aft_admin_role.arn
-  permissions_boundary = var.permissions_boundary_arn  
 }
 
 module "log_archive_exec_role" {
