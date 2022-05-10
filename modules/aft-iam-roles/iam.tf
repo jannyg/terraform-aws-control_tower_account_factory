@@ -60,5 +60,4 @@ module "aft_exec_role" {
     aws = aws.aft_management
   }
   trusted_entity = aws_iam_role.aft_admin_role.arn
-  permissions_boundary = var.permissions_boundary_arn  
 }
