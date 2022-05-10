@@ -367,6 +367,6 @@ variable "aft_vpc_public_subnet_02_cidr" {
 #########################################
 variable "permissions_boundary_arn" {
   type = string
-  description = "Optional POlicyBoundary to set for IAM-role created"
+  description = "Optional PolicyBoundary to set for IAM-role created"
   default = null
 }

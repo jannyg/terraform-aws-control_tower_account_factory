@@ -14,7 +14,8 @@ variable "trusted_entity" {
 }
 
 variable "permissions_boundary_arn" {
-
+    type = string
+    default = null
 }
 
 resource "aws_iam_role" "role" {
