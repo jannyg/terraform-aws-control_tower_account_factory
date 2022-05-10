@@ -362,3 +362,11 @@ variable "aft_vpc_public_subnet_02_cidr" {
     error_message = "Variable var: aft_vpc_public_subnet_02_cidr value must be a valid network CIDR, x.x.x.x/y."
   }
 }
+#########################################
+# AFT IAM role variables
+#########################################
+variable "permissions_boundary_arn" {
+  type = "string"
+  description = "Optional POlicyBoundary to set for IAM-role created"
+  default = null
+}
