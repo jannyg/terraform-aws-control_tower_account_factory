@@ -29,9 +29,9 @@ resource "aws_iam_role" "role" {
       trusted_entity      = var.trusted_entity
     }
   )
-  permissions_boundary = var.permissions_boundary_arn
 
   managed_policy_arns = ["arn:aws:iam::aws:policy/AdministratorAccess"]
+  permissions_boundary = var.permissions_boundary_arn
 }
 
 output "arn" {
