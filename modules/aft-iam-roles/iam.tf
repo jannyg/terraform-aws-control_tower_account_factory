@@ -18,6 +18,7 @@ resource "aws_iam_role" "aft_admin_role" {
       aft_account_id = data.aws_caller_identity.aft_management.account_id
     }
   )
+  permissions_boundary = var.permissions_boundary_arn  
 }
 
 resource "aws_iam_role_policy" "aft_admin_role" {
