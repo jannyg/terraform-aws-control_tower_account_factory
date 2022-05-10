@@ -14,7 +14,7 @@ variable "trusted_entity" {
 }
 
 variable "permissions_boundary_arn" {
-    type = "string"
+    type = string
     default = null
 }
 
