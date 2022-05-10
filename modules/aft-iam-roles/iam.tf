@@ -5,6 +5,11 @@ data "aws_caller_identity" "aft_management" {
   provider = aws.aft_management
 }
 
+variable "permissions_boundary_arn" {
+    type = string
+    default = null
+}
+
 resource "aws_iam_role" "aft_admin_role" {
   provider = aws.aft_management
   name     = "AWSAFTAdmin"
