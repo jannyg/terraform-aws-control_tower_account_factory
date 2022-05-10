@@ -13,6 +13,10 @@ variable "trusted_entity" {
 
 }
 
+variable "permissions_boundary_arn" {
+
+}
+
 resource "aws_iam_role" "role" {
   name = var.role_name
 
