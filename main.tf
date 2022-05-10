@@ -153,7 +153,7 @@ module "aft_iam_roles" {
     aws.log_archive    = aws.log_archive
     aws.aft_management = aws.aft_management
   }
-  permissions_boundary_arn  = var.permissions_boundary_arn
+  permissions_boundary  = var.permissions_boundary_arn
 }
 
 module "aft_lambda_layer" {
