@@ -20,6 +20,7 @@ variable "permissions_boundary_arn" {
 
 resource "aws_iam_role" "role" {
   name = var.role_name
+  permissions_boundary = var.permissions_boundary_arn
 
   # Terraform's "jsonencode" function converts a
   # Terraform expression result to valid JSON syntax.
@@ -31,7 +32,6 @@ resource "aws_iam_role" "role" {
   )
 
   managed_policy_arns = ["arn:aws:iam::aws:policy/AdministratorAccess"]
-  permissions_boundary = var.permissions_boundary_arn
 }
 
 output "arn" {
