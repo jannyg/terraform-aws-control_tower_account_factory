@@ -34,6 +34,7 @@ module "ct_management_exec_role" {
     aws = aws.ct_management
   }
   trusted_entity = aws_iam_role.aft_admin_role.arn
+  permissions_boundary = var.permissions_boundary_arn  
 }
 
 module "log_archive_exec_role" {
@@ -42,6 +43,7 @@ module "log_archive_exec_role" {
     aws = aws.log_archive
   }
   trusted_entity = aws_iam_role.aft_admin_role.arn
+  permissions_boundary = var.permissions_boundary_arn  
 }
 
 module "audit_exec_role" {
@@ -50,6 +52,7 @@ module "audit_exec_role" {
     aws = aws.audit
   }
   trusted_entity = aws_iam_role.aft_admin_role.arn
+  permissions_boundary = var.permissions_boundary_arn  
 }
 
 module "aft_exec_role" {
@@ -58,4 +61,5 @@ module "aft_exec_role" {
     aws = aws.aft_management
   }
   trusted_entity = aws_iam_role.aft_admin_role.arn
+  permissions_boundary = var.permissions_boundary_arn  
 }
